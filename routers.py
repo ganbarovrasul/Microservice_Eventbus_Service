@@ -2,14 +2,14 @@ from flask import jsonify, request
 from flask_cors import cross_origin
 from repostories import get_blog_comments, create_blog, create_comment
 from app import app
-# import time
+import time
 
 
 @app.route('/posts', methods = ['GET'])
 @cross_origin(supports_credentials=True)
 def posts():
     blogs = get_blog_comments()
-    # time.sleep(1)
+    time.sleep(1)
     return jsonify(blogs)
 
 
